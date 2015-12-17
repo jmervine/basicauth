@@ -14,6 +14,14 @@ go get github.com/jmervine/basicauth
 basicauth -h
 ```
 
+### example w/ curl
+
+```
+curl -i -H "$(basicauth -u 'user' -p 'pass' -header)" http://localhost:5000/endpoint/foo
+```
+
+> I know `curl` supports `-u` for this, I including this as a simple example.
+> Typically I use it for things like `httperf` and/or `siege`.
 
 ### in code
 
